@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar avec Menu Burger et Dropdown</title>
+    <link rel="stylesheet" href="TwigStyles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Mon Site</div>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">Accueil</a></li>
+            <li><a href="#">Actualité</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Catégorie</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Annonce Créateur contenus</a></li>
+                    <li><a href="#">Annonce Entreprise</a></li>
+                    <li><a href="#">Annonce Artiste</a></li>
+                </ul>
+            </li>
+            <li><a href="#" class="login">Connexion</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Bienvenue sur mon site</h1>
+        <p>Vous pouvez écrire ici...</p>
+    </main>
+
+    <script>
+        const mobileMenu = document.getElementById("mobile-menu");
+        const navLinks = document.querySelector(".nav-links");
+
+        mobileMenu.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+        });
+    </script>
+</body>
+</html>
